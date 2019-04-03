@@ -552,7 +552,9 @@ RCT_EXPORT_METHOD(openCropper:(NSDictionary *)options
 - (void)qb_imagePickerController:
 (QBImagePickerController *)imagePickerController
           didFinishPickingAssets:(NSArray *)assets {
-
+              
+    NSLog(@"there are %d objects in the array", [assets count]);
+              
     PHImageManager *manager = [PHImageManager defaultManager];
     PHImageRequestOptions* options = [[PHImageRequestOptions alloc] init];
     options.synchronous = NO;
