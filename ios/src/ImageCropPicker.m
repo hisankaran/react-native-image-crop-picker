@@ -297,7 +297,7 @@ RCT_REMAP_METHOD(clean, resolver:(RCTPromiseResolveBlock)resolve
 RCT_EXPORT_METHOD(openPicker:(NSDictionary *)options
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject) {
-
+    NSLog(@"Opening Picker");
     [self setConfiguration:options resolver:resolve rejecter:reject];
     self.currentSelectionMode = PICKER;
 
